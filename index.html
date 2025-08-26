@@ -15,7 +15,15 @@
             <img src="IMAGES/LOGO.jpg" alt="School Logo" class="school-logo">
             <h1>THE BENEDICTINE <br>ACADEMY</br></h1>
         </div>
-        
+    
+     <!-- This is the button for the hamburger menu on mobile -->
+    <button class="menu-toggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="nav-links">
         <nav>
     <ul>
         <li><a href="index.html" class="current-page">Home</a></li>
@@ -27,6 +35,8 @@
         <li><a href="fees.html">Fees and Funding</a></li>
     </ul>
 </nav>
+    </div>
+        
     </header>
 
 <!-- Contact Info in Header -->
@@ -191,6 +201,17 @@
             // Start the initial auto-scroll
             startAutoScroll();
         });
+
+        // Get the menu button and the navigation links
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+// Add a click event listener to the menu button
+menuToggle.addEventListener('click', () => {
+    // Toggle the 'active' class on the nav links to show/hide them
+    navLinks.classList.toggle('active');
+});
+
     </script>
 </body>
 </html>

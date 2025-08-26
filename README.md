@@ -1,4 +1,4 @@
-# THE BENEDICTINE ACADEMY
+# My Website Title
 
 Benedictine Academy Website
 This repository contains the source code for the official Benedictine Academy website. The primary goal of this site is to provide information for prospective students and their families, with a focus on admissions.
