@@ -1,0 +1,1011 @@
+/* General Navigation Link Styling */
+nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 0.75rem 1.25rem; /* Converted from 12px 20px */
+    border-radius: 0.375rem; /* Converted from 6px */
+    transition: all 0.3s ease-in-out;
+    font-weight: 500;
+    position: relative; /* Needed for the underline effect */
+}
+
+/* Hover Effect for all Links */
+nav ul li a:hover {
+    color: #3498db; /* A vibrant blue color */
+}
+
+/* The Underline Effect on Hover */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0.125rem; /* Converted from 2px */
+    bottom: -0.3125rem; /* Converted from -5px */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #3498db;
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    width: 80%;
+}
+
+/* --- The Current Page Styling --- */
+
+nav ul li a.current-page {
+    color: #3498db; /* Match the hover color */
+    font-weight: bold;
+    cursor: default;
+}
+
+/* The fixed underline for the current page */
+nav ul li a.current-page::after {
+    content: '';
+    position: absolute;
+    width: 80%; /* A consistent underline */
+    height: 0.125rem; /* Converted from 2px */
+    bottom: -0.3125rem; /* Converted from -5px */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #3498db;
+}
+
+/* Prevents the hover color change and the transition on the current page */
+nav ul li a.current-page:hover {
+    color: #3498db; /* Keeps the color consistent */
+    background-color: transparent; /* Removes any hover background */
+}
+
+
+/* HOME PAGE */
+/* Header & Navigation */
+/*
+    The main header container uses flexbox to align its children
+    (the logo and the navigation/contact group).
+    'flex-wrap: wrap' is crucial here, as it allows items to
+    wrap to the next line when the screen is too narrow,
+    keeping the layout from breaking.
+*/
+header {
+    font-family: 'Arial', sans-serif;
+    background-color: #351e01;
+    color: white;
+    padding: 0.625rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    position: relative; /* Kept for any absolutely positioned children you might add later */
+}
+
+/*
+    This container groups the navigation links and the contact info.
+    We're using flexbox on this group to stack the nav and contact
+    info vertically, and to align them to the right side of the header.
+*/
+.nav-and-contact-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* This aligns the items to the right */
+    flex-wrap: wrap;
+    gap: 0.5rem; /* Adds space between the nav and the contact info block */
+}
+
+.logo-and-name-container {
+    display: flex;
+    align-items: center;
+    gap: 0.9375rem;
+    font-size: 1rem;
+    line-height: 2.5rem;
+}
+
+.school-logo {
+    max-width: 5rem;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem; /* Added a small gap for spacing between nav links on smaller screens */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3125rem;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #cf0a66;
+}
+
+
+/* Contact Info in Header*/
+.header-contact-info {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-size: 1rem;       /* Converted from 16px */
+    gap: 0.625rem; /* Switched from a negative gap, which can cause layout issues. */
+}
+
+/* Hero Section */
+.hero {
+    background-color: #e9ecef;
+    padding: 0.3125rem 0.625rem; /* Converted from 5px 10px */
+    border-radius: 1.25rem;  /* Converted from 20px */
+    margin-top: 0.20rem !important;    /* Converted from 60px */
+    margin-bottom: 1.25rem; /* Converted from 20px */
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); /* Converted from 0 2px 4px */
+    line-height: 0.8; /* Changed from 0.1, which is unreadable. Use a unitless value for best practice. */
+}
+
+.hero-content {
+    max-width: 40rem; /* Converted from 800px */
+    margin: 0 auto;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    padding: 1.25rem; /* Converted from 20px */
+}
+
+.hero h2 {
+    color: #012953;
+    margin-bottom: 1.25rem; /* Converted from 20px */
+}
+
+.cta-button { 
+    display: inline-block;
+    background-color: #b3005a;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    padding: 0.625rem 1.25rem; /* Converted from 10px 20px */
+    text-decoration: none;
+    border-radius: 0.3125rem; /* Converted from 5px */
+    margin-top: 0.625rem;     /* Converted from 10px */
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #004080;
+}
+
+/* Image Slider */
+.image-slider-container {
+    position: relative;
+    max-width: 56.25rem; /* Converted from 900px */
+    margin: 1.25rem auto; /* Converted from 20px */
+    overflow: hidden;
+    border-radius: 0.625rem; /* Converted from 10px */
+    box-shadow: 0 1.25rem 1.25rem rgba(0, 0, 0, 0.2); /* Converted from 0 20px 20px */
+}
+
+.slider-img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.slider-img.active {
+    display: block;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 0.9375rem; /* Converted from 15px */
+    cursor: pointer;
+    font-size: 1.25rem; /* Converted from 20px */
+    transition: background 0.3s ease;
+    z-index: 10;
+}
+
+.slider-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+    left: 0.625rem; /* Converted from 10px */
+}
+
+.next-btn {
+    right: 0.625rem; /* Converted from 10px */
+}
+
+
+/* Features Section */
+.features {
+    /*
+        The 'auto-fit' and 'minmax' properties make this grid
+        automatically adjust the number of columns based on
+        the available space and the minimum size of each card.
+        This is the correct approach for a responsive grid.
+    */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 1.875rem;
+}
+
+.feature-card {
+    background-color: rgb(253, 243, 224);
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.feature-card img {
+    /*
+        This is the most important change.
+        'max-width: 100%' ensures the image never overflows its container,
+        while 'height: auto' maintains the correct aspect ratio,
+        preventing the image from being distorted.
+    */
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0.125rem;
+}
+
+.feature-card h3 {
+    color: #b35100;
+    margin-bottom: 0.625rem;
+}
+
+.feature-card p {
+    color: #333;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    margin-bottom: 0.9375rem;
+}
+
+
+/* News Section */
+.news-item {
+    background-color: #f8f9fa;
+    border-left: 0.3125rem solid #0056b3; /* Converted from 5px */
+    padding: 0.9375rem;  /* Converted from 15px */
+    border-radius: 0.3125rem; /* Converted from 5px */
+    box-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.05); /* Converted from 0 1px 3px */
+    margin-bottom: 0.625rem; /* Converted from 10px */
+    font-size: 1.25rem; /* Converted from 20px */
+}
+
+.news-item h3 {
+    color: #000000;
+    margin-bottom: 0.3125rem; /* Converted from 5px */
+}
+
+.news-item a {
+    color: #0056b3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 37.5rem; /* Converted from 600px */
+    margin: 0 auto;
+    background-color: white;
+    padding: 1.875rem; /* Converted from 30px */
+    border-radius: 0.5rem; /* Converted from 8px */
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* Converted from 0 4px 8px */
+    margin-top: 1.25rem; /* Converted from 20px */
+    color: rgb(54, 3, 3);
+}
+
+.section-title {
+    color: #ff0000;
+    margin-top: 1.25rem; /* Converted from 20px */
+    font-size: 1.5rem; /* Converted from 24px */
+    text-align: center;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem; /* Converted from 8px */
+    font-weight: bold;
+    margin-top: 0.5rem;   /* Converted from 8px */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.625rem;  /* Converted from 10px */
+    margin-bottom: 1.25rem; /* Converted from 20px */
+    border: 0.0625rem solid #ccc; /* Converted from 1px */
+    border-radius: 0.3125rem; /* Converted from 5px */
+    box-sizing: border-box;
+}
+
+.contact-form button.cta-button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Examinations Section */
+.exams-section {
+    text-align: center;
+    padding: 0.625rem 0.625rem; /* Converted from 10px 10px */
+    background-color: #f7f7f7;
+}
+
+.exams-section .section-title {
+    font-size: 1.25rem; /* Converted from 20px */
+    margin-bottom: 0.625rem; /* Converted from 10px */
+    color: #b35100;
+}
+
+.exams-section .section-description {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 0.625rem; /* Converted from 10px */
+    margin-top: 0.3125rem; /* Converted from 5px */
+    line-height: 1.5;
+    font-family: 'Arial', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    max-width: 50rem; /* Converted from 800px */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1.25rem; /* Converted from 0 20px */
+}
+
+.exams-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2.5rem; /* Converted from 40px */
+}
+
+.exams-logos img {
+    max-width: 6.25rem; /* Converted from 100px */
+    height: auto;
+    flex: 1 0 7.5rem; /* Converted from 120px */
+    object-fit: contain; 
+    transition: all 0.3s ease;
+}
+
+.exams-logos img:hover {
+    opacity: 1; /* Fully opaque on hover */
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    margin-top: auto; /* Pushes the footer to the bottom */
+    flex-shrink: 0; /* Prevents the footer from shrinking */
+    
+}
+
+/* ABOUT PAGE */
+/* About Section */
+#about-us {
+    padding: 2.5rem 1.25rem; /* Converted from 40px 20px */
+    border-radius: 0.5rem;  /* Converted from 8px */
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* Converted from 0 4px 8px */
+}
+
+.intro {
+    background-color: rgb(255, 255, 255);
+    padding: 1.25rem; /* Converted from 20px */
+    border-radius: 0.5rem;  /* Converted from 8px */
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); /* Converted from 0 2px 4px */
+    margin-bottom: 1.25rem; /* Converted from 20px */
+}
+
+.found {
+    color: #333;
+    margin-bottom: 1.25rem; /* Converted from 20px */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    padding: 0.9375rem; /* Converted from 15px */
+    border-radius: 0.3125rem; /* Converted from 5px */
+    box-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.1); /* Converted from 0 1px 3px */
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+.about-section {
+    background-color: rgb(255, 255, 255);
+    padding: 1.25rem; /* Converted from 20px */
+    border-radius: 0.5rem;  /* Converted from 8px */
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); /* Converted from 0 2px 4px */
+    margin-bottom: 1.25rem; /* Converted from 20px */
+    flex: 1;
+}
+
+.about-section h2 {
+    color: #0056b3;
+    margin-bottom: 0.9375rem; /* Converted from 15px */
+}
+
+.about-section ul {
+    list-style: disc;
+    padding-left: 1.25rem; /* Converted from 20px */
+}
+
+.about-section li {
+    margin-bottom: 0.5rem; /* Converted from 8px */
+}
+
+.school-building-img {
+    width: 100%;
+    max-width: 31.25rem; /* Converted from 500px */
+    height: auto;
+    border-radius: 0.5rem;  /* Converted from 8px */
+    box-shadow: 0 0.9375rem 1.25rem rgba(0, 0, 0, 0.1); /* Converted from 0 15px 20px */
+}
+
+.mission-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to stack on smaller screens */
+    align-items: center;
+    gap: 2rem; /* Already a relative unit */
+    margin-bottom: 1.25rem; /* Converted from 20px */
+}
+
+/* GALLERY PAGE */
+/* Gallery Section Styles */
+
+/*
+    The slideshow container is now more responsive. It will always take up
+    100% of the available width, but it won't get wider than 62.5rem.
+    Setting 'height: auto' ensures the images keep their aspect ratio.
+*/
+.slideshow-container {
+    max-width: 62.5rem; /* Converted from 1000px */
+    width: 100%;
+    position: relative;
+    margin: auto;
+    overflow: hidden; /* Ensures images don't spill out */
+}
+
+/*
+    These rules ensure the images themselves are fully responsive.
+    They will fill the container but won't be distorted.
+*/
+.mySlides {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.mySlides.fade {
+    opacity: 1;
+    display: block; /* Ensure a slide is displayed when it fades in */
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/*
+    The navigation buttons now use a media query to adjust their size
+    on smaller screens, making them easier to tap on a phone.
+*/
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 1rem; /* Converted from 16px */
+    margin-top: -1.375rem; /* Converted from -22px */
+    color: white;
+    font-weight: bold;
+    font-size: 1.125rem; /* Converted from 18px */
+    transition: 0.6s ease;
+    border-radius: 0 0.1875rem 0.1875rem 0; /* Converted from 3px */
+    user-select: none;
+    background-color: rgba(0,0,0,0.5);
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 0.1875rem 0 0 0.1875rem; /* Converted from 3px */
+}
+
+/* On hover, add a black background with a little transparency */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/*
+    Media query for smaller screens (less than 768px wide)
+    This makes the buttons a little smaller for mobile devices.
+*/
+@media only screen and (max-width: 48rem) {
+    .prev, .next {
+        font-size: 1rem;
+        padding: 0.75rem;
+    }
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr)); /* Converted from 280px */
+    gap: 0.9375rem; /* Converted from 15px */
+    padding: 0.625rem; /* Converted from 10px */
+    justify-content: center;
+}
+
+.gallery-item {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem; /* Converted from 8px */
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* Converted from 4px 8px */
+    transition: transform 0.2s ease-in-out;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+}
+
+.page-section {
+    margin-top: 1rem; /* Converted from 50px */
+    margin-bottom: 0;
+    border-radius: 0.5rem; /* Converted from 8px */
+    height: auto;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* Converted from 4px 8px */
+    position: relative;
+    overflow: hidden;
+    padding-left: 1.25rem; /* Converted from 20px */
+    padding-right: 1.25rem; /* Converted from 20px */
+    font-size: medium;
+}
+
+/* CONTACT PAGE */
+/* Contact Form Styles */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding doesn't affect the total width */
+}
+
+.contact-form button.cta-button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* INFO PAGE */
+/* Styling for the info section container */
+.info-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5625rem; /* Converted from 25px */
+    padding: 1.25rem; /* Converted from 20px */
+}
+
+/* Styling for each individual info item card */
+.info-item {
+    background-color: #ffffff;
+    border: 0.0625rem solid #e0e0e0; /* Converted from 1px */
+    border-radius: 0.75rem; /* Converted from 12px */
+    box-shadow: 0 0.375rem 0.9375rem rgba(0, 0, 0, 0.08); /* Converted from 6px 15px */
+    padding: 1.875rem; /* Converted from 30px */
+    max-width: 23.75rem; /* Converted from 380px */
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.info-item-link {
+    text-decoration: none;
+}
+
+/* A subtle hover effect with a card lift and shadow change */
+.info-item:hover {
+    transform: translateY(-0.5rem); /* Converted from -8px */
+    box-shadow: 0 0.625rem 1.5625rem rgba(0, 0, 0, 0.12); /* Converted from 10px 25px */
+}
+
+/* A pseudo-element for a subtle background glow on hover */
+.info-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0,77,153,0.1) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.info-item:hover::after {
+    opacity: 1;
+}
+
+/* Styling for the event title */
+.event-title {
+    font-size: 1.6rem;
+    color: #004d99 !important;
+    margin-top: 0;
+    margin-bottom: 0.625rem; /* Converted from 10px */
+    font-weight: 700;
+}
+
+/* Styling for the event date */
+.event-date {
+    font-style: italic;
+    color: #777;
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem; /* Converted from 20px */
+    border-left: 0.1875rem solid #007bff; /* Converted from 3px */
+    padding-left: 0.625rem; /* Converted from 10px */
+}
+
+/* Styling for the event description */
+.event-description {
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 1.25rem; /* Converted from 20px */
+}
+
+
+/* ONLINE APPLICATION PAGE */
+/* Styling for the online application section */
+.online-application-section {
+    max-width: 50rem; /* Converted from 800px */
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 0.5rem; /* Converted from 8px */
+    box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1); /* Converted from 2px 10px */
+    line-height: 1.6;
+}
+
+.online-application-section h2 {
+    color: #333;
+    font-size: 1.8rem;
+    border-bottom: 0.125rem solid #eee; /* Converted from 2px */
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.online-application-section ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+.online-application-section li {
+    margin-bottom: 1.5rem;
+}
+
+.online-application-section li strong {
+    color: #000;
+}
+
+.online-application-section li em {
+    color: #e53935;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.note-box {
+    background-color: #fce4ec;
+    border-left: 0.3125rem solid #d81b60; /* Converted from 5px */
+    padding: 1rem;
+    margin-top: 2rem;
+    border-radius: 0.25rem; /* Converted from 4px */
+}
+
+.note-box p {
+    margin: 0;
+    color: #444;
+}
+
+/* Styling for the Apply Now Button */
+.apply-now-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem; /* Converted from 12px 24px */
+    font-size: 1rem; /* Converted from 16px */
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #351e01;
+    margin-top: 1rem;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.375rem; /* Converted from 6px */
+    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1); /* Converted from 4px 6px */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.apply-now-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-0.125rem); /* Converted from -2px */
+    box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.15); /* Converted from 6px 12px */
+}
+
+/* Active (click) effect */
+.apply-now-button:active {
+    transform: translateY(0);
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); /* Converted from 2px 4px */
+}
+
+.center-container {
+    text-align: center;
+}
+
+/* ADMISSION FORM PAGE */
+/* Admission Form Styles */
+.admission-form-container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem; /* Converted from 8px */
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1); /* Converted from 10px */
+    max-width: 37.5rem; /* Converted from 600px */
+    margin: auto;
+}
+
+.admission-form-container h2 {
+    color: #7a5a14;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 0.0625rem solid #ccc; /* Converted from 1px */
+    border-radius: 0.25rem; /* Converted from 4px */
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: #7a5a14;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem; /* Converted from 4px */
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background: #351e01;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 0.9375rem; /* Converted from 15px */
+}
+
+/* FEES AND FUNDING PAGE */
+/* Section Backgrounds */
+#fees-and-funding {
+    background-color: #f8f9fa; /* A very light gray background */
+}
+
+#other-requirements {
+    background-color: #ffffff; /* Use a different background for visual separation */
+}
+
+/* General Container */
+.fees-container, .requirements-container {
+    max-width: 56.25rem; /* Converted from 900px */
+    margin: 0 auto;
+    margin-top: 4.375rem; /* Converted from 70px */
+    text-align: center;
+    padding: 1.25rem; /* Converted from 20px */
+    box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.1); /* Converted from 4px 15px */
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 2em;
+    color: #2c3e50;
+    margin-bottom: 1.5625rem; /* Converted from 25px */
+}
+
+/* Table Styling */
+.fees-table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 1.875rem; /* Converted from 30px */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.1); /* Converted from 4px 15px */
+    border-radius: 0.5rem; /* Converted from 8px */
+    overflow: hidden;
+}
+
+th, td {
+    padding: 0.9375rem; /* Converted from 15px */
+    border-bottom: 0.0625rem solid #dfe4e6; /* Converted from 1px */
+    text-align: left;
+    color: #34495e;
+}
+
+thead th {
+    background-color: #eaf2f8;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 0.03125rem; /* Converted from 0.5px */
+}
+
+.serial-number {
+    width: 5%;
+    text-align: center;
+}
+
+/* Align values to the right for financial clarity */
+td:nth-child(n+3) {
+    text-align: right;
+}
+
+.total-row {
+    font-weight: bold;
+    background-color: #f0f4f7;
+    border-top: 0.125rem solid #34495e; /* Converted from 2px */
+}
+
+/* List Styling */
+.requirements-list,
+.notes-list {
+    list-style-type: disc;
+    text-align: left;
+    margin: 0 auto 1.875rem; /* Converted from 30px */
+    padding-left: 1.25rem; /* Converted from 20px */
+    color: #555;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.requirements-list li,
+.notes-list li {
+    margin-bottom: 0.625rem; /* Converted from 10px */
+}
+
+.section-note {
+    margin-top: 2.5rem; /* Converted from 40px */
+}
+
+.welcome-message {
+    font-style: italic;
+    color: #7f8c8d;
+    margin-top: 1.875rem; /* Converted from 30px */
+}
+
+.payment-details {
+    text-align: left;
+    padding: 1.875rem; /* Converted from 30px */
+    background-color: #f0f8ff;
+    border-radius: 0.75rem; /* Converted from 12px */
+    box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.1); /* Converted from 4px 15px */
+    margin-top: 1.875rem; /* Converted from 30px */
+}
+
+.payment-details h3 {
+    font-size: 1.6em;
+    color: #2c3e50;
+    margin-bottom: 0.9375rem; /* Converted from 15px */
+    border-bottom: 0.125rem solid #eecd60; /* Converted from 2px */
+    padding-bottom: 0.5rem; /* Converted from 8px */
+    display: inline-block;
+}
+
+.payment-details p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.25rem; /* Converted from 20px */
+}
+
+.payment-details ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 0.625rem; /* Converted from 10px */
+}
+
+.payment-details ul li {
+    margin-bottom: 0.75rem; /* Converted from 12px */
+    color: #333;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    gap: 0.625rem; /* Converted from 10px */
+}
+
+.payment-details ul li strong {
+    color: #331e02;
+}
+
+.copy-account-row {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem; /* Converted from 10px */
+}
+
+.copy-button {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.copy-button:hover {
+    transform: scale(1.1);
+}
+
+.copy-logo {
+    width: 1.25rem; /* Converted from 20px */
+    height: 1.25rem; /* Converted from 20px */
+    vertical-align: middle;
+}
+
+#copy-feedback {
+    color: #27ae60;
+    margin-top: 0.625rem; /* Converted from 10px */
+    font-weight: bold;
+    display: none;
+    text-align: center;
+}
+

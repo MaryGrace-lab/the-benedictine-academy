@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Application Form</title>
+    <link rel="icon" type="image/png" href="IMAGES/LOGO.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="logo-and-name-container">
+        <img src="IMAGES/LOGO.jpg" alt="School Logo" class="school-logo">
+        <h1>THE BENEDICTINE <br>ACADEMY</br></h1>
+    </div>
+<nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="news.html">News Board</a></li>
+            <li><a href="admission.html" class="current-page">Admissions</a></li>
+            <li><a href="fees.html">Fees and Funding</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+        <!-- Home Section -->
+         <div class="header-contact-info">
+    <p>
+        <img src="IMAGES/phone.png" alt="Phone" style="width: 20px; height: 20px; vertical-align: middle;"> Call us today: +2347059443788   |   <img src="IMAGES/whatsapp.png" alt="WhatsApp" style="width: 20px; height: 20px; vertical-align: middle;"> Chat our admin officer: +2347059443788   |   <img src="IMAGES/email.png" alt="Email" style="width: 20px; height: 20px; vertical-align: middle;"> enquiries @ thebenedictineacademy@gmail.com <br>Academic Session: 2025/2026
+    </p>
+
+</div>
+</main>
+
+
+    <main>
+        <section class="admission-form-container">
+            <section id="admission-form-section">
+    <div class="admission-form-container">
+        <h2>Admission Application Form Online</h2>
+        <p class="form-instruction">Please fill out the form below to apply for admission to The Benedictine Academy.</p>
+
+        <form action="https://formspree.io/f/mqadzjro" method="post" enctype="multipart/form-data" class="admission-form" id="admissionForm">
+
+            <fieldset>
+                <legend>Section 1: Student Information</legend>
+                <div class="form-group">
+                    <label for="student-name">First Name of Applicant</label>
+                    <input type="text" id="student-name" name="student-name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="student-name">Middle Name of Applicant (optional)</label>
+                    <input type="text" id="student-name" name="student-name">
+                </div>
+
+                <div class="form-group">
+                    <label for="student-name">Surname Name of Applicant</label>
+                    <input type="text" id="student-name" name="student-name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="DOB" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="birth-place">Place of Birth</label>
+                    <input type="text" id="birth-place" name="birth-place" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" required>
+                </div>
+
+
+                <div class="form-group">
+                    <label>Gender</label>
+                    <div class="radio-group">
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="student-email">Student's Email Address</label>
+                    <input type="email" id="student-email" name="student_email" required>
+                </div>
+                <div class="form-group">
+                    <label for="student-phone">Student Phone Number</label>
+                    <input type="tel" id="student-phone" name="student_phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="student-phone">Student Home Address</label>
+                    <input type="text" id="student-address" name="student_address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="immunization-record">Immunization records line</label>
+                    <input type="text" id="immunization-record" name="immunization-record" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="health-challenge">Health challenge</label>
+                    <input type="text" id="health-challenge" name="health-challenge">
+                </div>
+
+                <div class="form-group">
+    <label for="sponsor">Who is sponsoring you?</label>
+    <select id="sponsor" name="sponsor" required>
+        <option value="">-- Choose your sponsor --</option>
+        <option value="parent">Parent</option>
+        <option value="guardian">Guardian</option>
+        <option value="other">Other</option>
+        </select>
+</div>
+
+                <div class="form-group">
+    <label for="sponsor">Relationship with sponsor</label>
+    <select id="sponsor" name="sponsor" required>
+        <option value="">-- Choose the Relationship --</option>
+        <option value="father">Father</option>
+        <option value="mother">Mother</option>
+        <option value="sibling">Sibling</option>
+        <option value="relative">Relative</option>
+        <option value="guardian">Guardian</option>
+        <option value="other">Other</option>
+        </select>
+</div>
+
+                <div class="form-group">
+    <label for="proposed-class">Proposed Class/Grade</label>
+    <select id="proposed-class" name="proposed_class" required>
+        <option value="">-- Select a Class --</option>
+        <option value="preschool">Pre-Nursery</option>
+        <option value="nursery1">Nursery 1</option>
+        <option value="nursery2">Nursery 2</option>
+        <option value="primary1">Primary 1</option>
+        <option value="primary2">Primary 2</option>
+        <option value="primary3">Primary 3</option>
+        <option value="primary4">Primary 4</option>
+        <option value="primary5">Primary 5</option>
+        <option value="jss1">JSS 1</option>
+        <option value="jss2">JSS 2</option>
+        <option value="jss3">JSS 3</option>
+        <option value="sss1">SSS 1</option>
+        <option value="sss2">SSS 2</option>
+        <option value="sss3">SSS 3</option>
+    </select>
+</div>
+
+                <div class="form-group">
+                    <label for="prev-school">Previous School Attended</label>
+                    <input type="text" id="prev-school" name="prev_school">
+                </div>
+                
+            </fieldset>
+
+            <fieldset>
+                <legend>Section 2: Parent/Guardian Information</legend>
+                <div class="form-group">
+                    <label for="parent-name">Parent/Guardian Full Name</label>
+                    <input type="text" id="parent1-name" name="parent_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="parent-email">Parent/Guardian Email Address</label>
+                    <input type="email" id="parent1-email" name="parent_email" required>
+                </div>
+                <div class="form-group">
+                    <label for="parent-phone">Parent/Guardian Phone Number</label>
+                    <input type="tel" id="parent1-phone" name="parent_phone" required>
+                
+                <div class="form-group">
+                <label for="parent-address">Parent Home Address</label>
+                <input type="text" id="parent-address" name="parent_address" required>
+                </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Section 3: Required Documents</legend>
+                <div class="form-group">
+                    <label for="infomation">
+            <strong>After completing the registration form online, make sure to print the completed form out 
+            for your records and bring to the school's admission office at 37, Old Mechanic Road, Off Siluko 
+            Road Egor, Benin City, Edo State.</strong>
+            <br>
+            <strong>Submit the following documents at the school's admission office: </strong>
+            <br>
+            <ul>-2 passport photographs of the applicant</ul>
+            <ul>-Photocopy of applicant’s last class result (where applicable)</ul>
+            <ul>-Photocopy of applicant’s Birth Certificate/ immunization record</ul>
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Section 4: Declaration</legend>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="declaration" name="declaration-of-consent" required>
+                    <label for="declaration">I declare that the information provided is true and accurate to the best of my knowledge.</label>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="submit-button">Submit Application</button>
+            <p id="formStatus" class="form-status"></p>
+        </form>
+    </div>
+</section>
+    </main>
+
+<footer>
+        <p>&copy; 2017 The Benedictine Academy. All rights reserved.</p>
+        <p>Address: 37, Old Mechanic Road, Off Siluko Road Egor, Benin City, Edo State. | Phone: +234 705 944 3788</p>
+    </footer>
+
+    <script src="script.js">
+        document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('admissionForm');
+    const formStatus = document.getElementById('formStatus');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting the default way
+
+        // Basic validation
+        const fullName = document.getElementById('fullName').value;
+        const email = document.getElementById('email').value;
+        const gradeLevel = document.getElementById('gradeLevel').value;
+
+        if (fullName === "" || email === "" || gradeLevel === "") {
+            formStatus.textContent = "Please fill out all required fields.";
+            formStatus.style.color = "red";
+            return;
+        }
+
+        // Simulate a successful form submission
+        formStatus.textContent = "Thank you for your application! We will contact you shortly.";
+        formStatus.style.color = "green";
+
+        // Reset the form after a delay
+        setTimeout(() => {
+            form.reset();
+            formStatus.textContent = "";
+        }, 3000);
+    });
+});
+    </script>
+</body>
+</html>

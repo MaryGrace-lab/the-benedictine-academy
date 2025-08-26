@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="IMAGES/LOGO.jpg">
+    <link rel="stylesheet" href="style.css">
+    <title>Gallery</title>
+</head>
+<body>
+<header>
+    <div class="logo-and-name-container">
+        <img src="IMAGES/LOGO.jpg" alt="School Logo" class="school-logo">
+        <h1>THE BENEDICTINE <br>ACADEMY</br></h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="gallery.html" class="current-page">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="news.html">News Board</a></li>
+            <li><a href="admission.html">Admissions</a></li>
+            <li><a href="fees.html">Fees and Funding</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+        <!-- Home Section -->
+         <div class="header-contact-info">
+    <p>
+        <img src="IMAGES/phone.png" alt="Phone" style="width: 20px; height: 20px; vertical-align: middle;"> Call us today: +2347059443788   |   <img src="IMAGES/whatsapp.png" alt="WhatsApp" style="width: 20px; height: 20px; vertical-align: middle;"> Chat our admin officer: +2347059443788   |   <img src="IMAGES/email.png" alt="Email" style="width: 20px; height: 20px; vertical-align: middle;"> enquiries @ thebenedictineacademy@gmail.com <br>Academic Session: 2025/2026
+    </p>
+
+</div>
+</main>
+
+    <!-- Gallery Section -->
+       <section id="gallery" class="page-section">
+    <h2 class="section-title">Photo Gallery</h2>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <img src="IMAGES/1.jpg" alt="School event photo 1">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="IMAGES/2.jpg" alt="School event photo 2">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="IMAGES/3.jpg" alt="School event photo 3">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="IMAGES/4.jpg" alt="School event photo 4">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="IMAGES/slide 3.jpg" alt="School event photo 5">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="IMAGES/6.jpg" alt="School event photo 6">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="IMAGES/slide 4.jpg" alt="School event photo 6">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="IMAGES/7.jpg" alt="School event photo 6">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+</section>
+
+<footer>
+        <p>&copy; 2017 The Benedictine Academy. All rights reserved.</p>
+        <p>Address: 37, Old Mechanic Road, Off Siluko Road Egor, Benin City, Edo State. | Phone: +234 705 944 3788</p>
+    </footer>
+
+<script>
+    let slideIndex = 1; // Start with the first slide
+
+    // This function controls both the automatic slideshow and manual clicks
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+
+        // Handle button clicks (n is defined) or automatic transitions (n is undefined)
+        if (n) { 
+            slideIndex = n;
+        } else {
+            slideIndex++; // For automatic transition
+        }
+        
+        // Reset the index if it goes out of bounds
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        if (slideIndex < 1) {
+            slideIndex = slides.length;
+        }
+
+        // Hide all slides and remove the fade class
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+            slides[i].classList.remove('fade');
+        }
+
+        // Display the current slide and add the fade class to trigger the animation
+        slides[slideIndex - 1].style.display = "block";
+        void slides[slideIndex - 1].offsetWidth; // This forces a reflow to restart the animation
+        slides[slideIndex - 1].classList.add('fade');
+    }
+
+    // This is the main function for automatic slide changes
+    function autoShowSlides() {
+        showSlides();
+        setTimeout(autoShowSlides, 10000); // Change image every 5 seconds
+    }
+
+    // This is the function for the next/previous buttons
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+    
+    // Start the automatic slideshow when the page loads
+    window.onload = autoShowSlides;
+</script>
+
+</body>
+</html>
