@@ -1,4 +1,4 @@
-# My Website Title
+# THE BENEDICTINE ACADEMY
 
 Benedictine Academy Website
 This repository contains the source code for the official Benedictine Academy website. The primary goal of this site is to provide information for prospective students and their families, with a focus on admissions.
@@ -23,4 +23,5 @@ CSS: For all styling and layout, including responsive design.
 
 ## Credits
 Credits
-Developer: Mary Grace
+
+Developer: Mary Umoize
